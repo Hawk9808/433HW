@@ -1,10 +1,10 @@
 ---
-title: "Untitled"
-author: "HW3-Shihao Yang"
+title: "HW3"
+author: "Shihao Yang"
 date: "9/27/2021"
-output: html_document
+output: github_document
 ---
-
+# My github repo: (https://github.com/Hawk9808/433HW)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
@@ -26,6 +26,8 @@ orig_data <- flights
 summary(flights)
   
 ```
+
+
 >*As we can see from the above summary, 8255 flights have a missing `dep_time`, 8255 have a missing `dep_delay`, 8713 have a missing `arr_time`, 9430 have a missing `arr_delay`, and 9430 have a missing `air_time`. In a row with missing values, we can expect that this might be a flight that failed to depart or arrive. Also, this missing data could be just normally lost.*
 
 #### 2. Currently dep_time and sched_dep_time are convenient to look at, but hard to compute with because they’re not really continuous numbers. Convert them to a more convenient representation of number of minutes since midnight.
@@ -53,5 +55,7 @@ ggplot(data = data_3, aes(x= cancel_flight/total_num_flight)) +
   geom_smooth(aes(y=arr_delay_mean), color='red')+
   ylab('mean delay time in min')
 ```
+
+
 >*As we can see from the above graph, in many times, as cancellation rate increase, the average delay of that day also increase.*
 
